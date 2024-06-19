@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d31c7epwpws15"]
+[gd_scene load_steps=6 format=3 uid="uid://d31c7epwpws15"]
 
 [ext_resource type="PackedScene" uid="uid://bdjgnxbggc0d" path="res://TitleScreen/Options_Menu/Window_Mode_button.tscn" id="1_iwt7u"]
+[ext_resource type="PackedScene" uid="uid://bwouc7h03cl8v" path="res://TitleScreen/Options_Menu/resolution_mode_button.tscn" id="2_2mky7"]
+[ext_resource type="PackedScene" uid="uid://ciabjpijxfjyv" path="res://TitleScreen/Options_Menu/options_display_button.tscn" id="3_6qwo5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcgc2"]
 bg_color = Color(0.197937, 0.197937, 0.197937, 1)
@@ -94,11 +96,23 @@ theme_override_constants/margin_bottom = 24
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/畫質/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/畫質/MarginContainer/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 48
+
+[node name="resolution_mode_button" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_2mky7")]
+layout_mode = 2
 
 [node name="Window_mode_button" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_iwt7u")]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Options_Display_Button" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_6qwo5")]
+visible = false
 layout_mode = 2
 
 [node name="控制" type="TabBar" parent="TabContainer"]
