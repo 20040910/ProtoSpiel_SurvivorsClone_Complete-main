@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcyka5e06knff"]
+
+[ext_resource type="Script" path="res://TitleScreen/menu.gd" id="1_oi0p3"]
+[ext_resource type="Texture2D" uid="uid://cci33xhg2sgt2" path="res://TitleScreen/電腦主畫面.png" id="2_e05bq"]
+[ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="3_kwsdd"]
+[ext_resource type="PackedScene" uid="uid://c2nf4nbwcu63k" path="res://TitleScreen/Options_Menu/options_menu.tscn" id="4_hum8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rggqq"]
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oi0p3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 644.0
+offset_bottom = 366.0
+color = Color(0.572549, 0.207843, 0.168627, 1)
+
+[node name="電腦主畫面" type="Sprite2D" parent="."]
+position = Vector2(318.889, 182.75)
+scale = Vector2(0.335532, 0.343982)
+texture = ExtResource("2_e05bq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Options_Menu" parent="." instance=ExtResource("4_hum8h")]
+visible = false
+layout_mode = 1
+
+[node name="Btn" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="btn_exit" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 244.0
+offset_top = 307.0
+offset_right = 384.0
+offset_bottom = 337.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[node name="btn_play" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 246.0
+offset_top = 104.0
+offset_right = 385.0
+offset_bottom = 134.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[node name="btn_options" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 245.0
+offset_top = 266.0
+offset_right = 384.0
+offset_bottom = 296.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[connection signal="click_end" from="Btn/btn_exit" to="." method="_on_btn_exit_click_end"]
+[connection signal="click_end" from="Btn/btn_play" to="." method="_on_btn_play_click_end"]
+[connection signal="click_end" from="Btn/btn_options" to="." method="_on_btn_options_click_end"]

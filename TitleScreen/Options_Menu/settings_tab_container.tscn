@@ -1,0 +1,155 @@
+[gd_scene load_steps=4 format=3 uid="uid://d31c7epwpws15"]
+
+[ext_resource type="PackedScene" uid="uid://bdjgnxbggc0d" path="res://TitleScreen/Options_Menu/Window_Mode_button.tscn" id="1_iwt7u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcgc2"]
+bg_color = Color(0.197937, 0.197937, 0.197937, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.942165, 0.658321, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wkc5"]
+bg_color = Color(0.295867, 0.295867, 0.295866, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0, 0.942165, 0.658321, 1)
+
+[node name="Settings_Tab_container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.989899)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gcgc2")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_2wkc5")
+tab_alignment = 1
+current_tab = 1
+clip_tabs = false
+
+[node name="音效" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/音效"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/音效/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Label" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound1"
+
+[node name="Label2" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound2"
+
+[node name="Label3" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound3"
+
+[node name="Label4" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound4"
+
+[node name="畫質" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/畫質"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/畫質/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/畫質/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Window_mode_button" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_iwt7u")]
+layout_mode = 2
+
+[node name="控制" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/控制"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="無障礙功能" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/無障礙功能"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/無障礙功能/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Label" type="Label" parent="TabContainer/無障礙功能/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A1"
+
+[node name="Label2" type="Label" parent="TabContainer/無障礙功能/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A2"
+
+[node name="Label3" type="Label" parent="TabContainer/無障礙功能/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A3"
+
+[node name="Label4" type="Label" parent="TabContainer/無障礙功能/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A4"

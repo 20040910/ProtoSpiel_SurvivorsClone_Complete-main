@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdjgnxbggc0d"]
+
+[ext_resource type="PackedScene" uid="uid://ciabjpijxfjyv" path="res://TitleScreen/Options_Menu/options_display_button.tscn" id="1_eoidd"]
+[ext_resource type="Script" path="res://TitleScreen/Options_Menu/Window_Mode_button.gd" id="2_ijvxq"]
+
+[node name="window_mode_button" instance=ExtResource("1_eoidd")]
+script = ExtResource("2_ijvxq")
+
+[node name="HBoxContainer" parent="." index="0"]
+theme_override_constants/separation = 30
+
+[node name="Label" parent="HBoxContainer" index="0"]
+custom_minimum_size = Vector2(128, 0)
+text = "視窗模式
+"
+
+[node name="OptionButton" parent="HBoxContainer" index="2"]
+custom_minimum_size = Vector2(128, 32)

@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://bap0q3ifthj2w"]
+
+[ext_resource type="Script" path="res://TitleScreen/Options_Menu/settings_menu.gd" id="1_yqhdt"]
+
+[node name="SettingsMenu" type="Window"]
+position = Vector2i(150, 46)
+size = Vector2i(300, 300)
+script = ExtResource("1_yqhdt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.5
+offset_right = 35.5
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VolumeLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+step = 5.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="FullscreenLabel" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="FullscreenCheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/FullscreenCheckButton" to="." method="_on_fullscreen_check_button_pressed"]
