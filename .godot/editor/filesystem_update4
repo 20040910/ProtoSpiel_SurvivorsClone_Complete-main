@@ -9,3 +9,5 @@ res://TitleScreen/Options_Menu/Window_Mode_button.gd
 res://TitleScreen/Options_Menu/resolution_mode_button.gd
 res://TitleScreen/menu.gd
 res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn
+res://TitleScreen/Options_Menu/FilterStrengthSlider.gd
+res://TitleScreen/Options_Menu/options_display_button.gd

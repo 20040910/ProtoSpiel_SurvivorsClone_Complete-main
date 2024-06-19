@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d31c7epwpws15"]
+[gd_scene load_steps=7 format=3 uid="uid://d31c7epwpws15"]
 
 [ext_resource type="PackedScene" uid="uid://bdjgnxbggc0d" path="res://TitleScreen/Options_Menu/Window_Mode_button.tscn" id="1_iwt7u"]
 [ext_resource type="PackedScene" uid="uid://bwouc7h03cl8v" path="res://TitleScreen/Options_Menu/resolution_mode_button.tscn" id="2_2mky7"]
+[ext_resource type="PackedScene" uid="uid://xdbf1oews22n" path="res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn" id="3_uy6gj"]
+[ext_resource type="Texture2D" uid="uid://b4d1sqd5k45i5" path="res://Textures/GUI/CRF.png" id="4_kmtat"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcgc2"]
 bg_color = Color(0.197937, 0.197937, 0.197937, 1)
@@ -109,6 +111,19 @@ layout_mode = 2
 [node name="Window_mode_button" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_iwt7u")]
 layout_mode = 2
 size_flags_horizontal = 0
+
+[node name="Filtter" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_uy6gj")]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/畫質/MarginContainer/ScrollContainer/VBoxContainer/CanvasLayer"]
+offset_right = 641.0
+offset_bottom = 364.0
+mouse_filter = 2
+texture = ExtResource("4_kmtat")
+expand_mode = 3
 
 [node name="控制" type="TabBar" parent="TabContainer"]
 visible = false
