@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcyka5e06knff"]
+[gd_scene load_steps=7 format=3 uid="uid://dcyka5e06knff"]
 
 [ext_resource type="Script" path="res://TitleScreen/menu.gd" id="1_oi0p3"]
 [ext_resource type="Texture2D" uid="uid://cci33xhg2sgt2" path="res://TitleScreen/電腦主畫面.png" id="2_e05bq"]
 [ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="3_kwsdd"]
 [ext_resource type="PackedScene" uid="uid://c2nf4nbwcu63k" path="res://TitleScreen/Options_Menu/options_menu.tscn" id="4_hum8h"]
+[ext_resource type="Texture2D" uid="uid://b4d1sqd5k45i5" path="res://Textures/GUI/CRF.png" id="5_c51r4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rggqq"]
 bg_color = Color(1, 1, 1, 0)
@@ -26,6 +27,15 @@ layout_mode = 0
 offset_right = 644.0
 offset_bottom = 366.0
 color = Color(0.572549, 0.207843, 0.168627, 1)
+
+[node name="FilterLayer" type="CanvasLayer" parent="ColorRect"]
+
+[node name="FilterImage" type="TextureRect" parent="ColorRect/FilterLayer"]
+offset_right = 641.0
+offset_bottom = 364.0
+mouse_filter = 2
+texture = ExtResource("5_c51r4")
+expand_mode = 3
 
 [node name="電腦主畫面" type="Sprite2D" parent="."]
 position = Vector2(318.889, 182.75)

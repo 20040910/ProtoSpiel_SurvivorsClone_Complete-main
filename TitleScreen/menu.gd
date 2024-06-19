@@ -8,6 +8,8 @@ extends Control
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var btn = $Btn
 
+
+
 func _ready():
 	handle_connecting_signals()
 
