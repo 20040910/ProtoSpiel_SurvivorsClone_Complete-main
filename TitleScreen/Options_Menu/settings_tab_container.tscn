@@ -84,8 +84,9 @@ layout_mode = 2
 value = 100.0
 
 [node name="HSlider2" type="HSlider" parent="TabContainer/音效/MarginContainer"]
-custom_minimum_size = Vector2(100, 180)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_vertical = 4
 value = 100.0
 
 [node name="畫質" type="TabBar" parent="TabContainer"]
