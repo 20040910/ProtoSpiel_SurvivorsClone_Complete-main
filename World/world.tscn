@@ -95,6 +95,8 @@ texture = ExtResource("1_a46rg")
 region_enabled = true
 region_rect = Rect2(-4000, -4000, 4000, 4000)
 
+[node name="Crystal_T" parent="." instance=ExtResource("2_rkt6p")]
+
 [node name="Player" parent="." instance=ExtResource("2_40uwv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
@@ -114,8 +116,6 @@ spawns = Array[ExtResource("5_jj7s8")]([SubResource("Resource_03m25"), SubResour
 
 [node name="Loot" type="Node2D" parent="." groups=["loot"]]
 
-[node name="Crystal_T" parent="." instance=ExtResource("2_rkt6p")]
-
 [node name="snd_Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("10_rk3we")
@@ -123,4 +123,5 @@ volume_db = -15.0
 autoplay = true
 script = ExtResource("11_ovtx6")
 
+[connection signal="Respawn" from="Player" to="snd_Music" method="_on_player_respawn"]
 [connection signal="playerdeath" from="Player" to="snd_Music" method="_on_player_playerdeath"]

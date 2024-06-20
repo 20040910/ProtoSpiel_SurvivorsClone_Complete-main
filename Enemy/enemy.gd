@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var movement_speed = 20.0
+@export var movement_speed = 10.0
 @export var hp = 10
 @export var knockback_recovery = 3.5
 @export var experience = 1

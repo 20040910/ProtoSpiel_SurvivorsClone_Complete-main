@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var movement_speed = 40.0
-var hp = 80
+var hp = 1
 var maxhp = 80
 var last_movement = Vector2.UP
 var time = 0
@@ -76,6 +76,7 @@ var enemy_close = []
 
 #Signal
 signal playerdeath
+signal Respawn
 
 func _ready():
 	upgrade_character("icespear1")
@@ -362,15 +363,19 @@ func death():
 	get_tree().paused = true
 	var tween = deathPanel.create_tween()
 	tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	tween.play()
-	if time >= 300:
-		lblResult.text = "You Win"
-		sndVictory.play()
-	else:
-		lblResult.text = "You Lose"
-		sndLose.play()
-
+	tween.play()	
+	
+	lblResult.text = "You died"
+	sndLose.play()
 
 func _on_btn_menu_click_end():
 	get_tree().paused = false
-	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
+	emit_signal("Respawn")
+	deathPanel.visible = false
+	hp = 2
+	_on_hurt_box_hurt(0,0,0)
+	position = Vector2.ZERO
+	
+	
+	
+	

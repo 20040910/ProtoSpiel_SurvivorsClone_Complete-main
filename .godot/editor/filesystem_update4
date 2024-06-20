@@ -11,3 +11,4 @@ res://Player/player.gd
 res://Utility/hurt_box.gd
 res://Enemy/enemy_kobold_weak.tscn
 res://World/crystal_t.tscn
+res://Audio/Music/snd_Music.gd
