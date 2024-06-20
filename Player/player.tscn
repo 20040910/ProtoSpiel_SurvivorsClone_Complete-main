@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dncgepmkc4jf4"]
+[gd_scene load_steps=22 format=3 uid="uid://dncgepmkc4jf4"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_37q80"]
 [ext_resource type="Texture2D" uid="uid://doa3scrwgj2oq" path="res://Textures/Player/player_sprite.png" id="1_jefax"]
@@ -29,6 +29,12 @@ radius = 370.951
 radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vwp8"]
+
+[sub_resource type="SystemFont" id="SystemFont_4jr57"]
+font_names = PackedStringArray("Arial")
+
+[sub_resource type="SystemFont" id="SystemFont_yeely"]
+font_names = PackedStringArray("Arial")
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
@@ -123,7 +129,7 @@ layout_mode = 0
 offset_left = 540.0
 offset_right = 640.0
 offset_bottom = 20.0
-theme_override_fonts/font = ExtResource("6_okx7u")
+theme_override_fonts/font = SubResource("SystemFont_4jr57")
 theme_override_font_sizes/font_size = 16
 text = "Level: 1"
 horizontal_alignment = 1
@@ -218,7 +224,7 @@ offset_left = 280.0
 offset_top = 20.0
 offset_right = 360.0
 offset_bottom = 44.0
-theme_override_fonts/font = ExtResource("6_okx7u")
+theme_override_fonts/font = SubResource("SystemFont_yeely")
 theme_override_font_sizes/font_size = 20
 text = "00:00"
 horizontal_alignment = 1
@@ -243,7 +249,7 @@ offset_bottom = 56.0
 columns = 10
 
 [node name="Image(7)" type="Sprite2D" parent="GUILayer/GUI"]
-position = Vector2(614.625, 139.408)
+position = Vector2(614.625, 116)
 scale = Vector2(0.153321, 0.159937)
 texture = ExtResource("13_d8b1y")
 

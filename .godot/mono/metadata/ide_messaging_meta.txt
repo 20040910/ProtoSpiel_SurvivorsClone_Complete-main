@@ -1,2 +1,0 @@
-﻿5404
-C:/Users/anku0/AppData/Roaming/godotenv/godot/bin/godot.exe
