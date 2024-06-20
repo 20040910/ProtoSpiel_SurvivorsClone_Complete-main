@@ -6,3 +6,4 @@ res://Player/player.tscn
 res://World/world.tscn
 res://Enemy/enemy_kobold_weak.tscn
 res://World/crystal_t.tscn
+res://Player/player.gd
