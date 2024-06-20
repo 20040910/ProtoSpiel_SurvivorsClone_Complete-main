@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch67tv55fh74v"]
+
+[ext_resource type="Texture2D" uid="uid://csrfy0geb2e31" path="res://Textures/Crystal/Crystal.png" id="1_sarl3"]
+
+[node name="Crystal" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+
+[node name="Crystal" type="Sprite2D" parent="."]
+texture = ExtResource("1_sarl3")

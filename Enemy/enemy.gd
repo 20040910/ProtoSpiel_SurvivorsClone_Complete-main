@@ -10,6 +10,7 @@ var knockback = Vector2.ZERO
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var loot_base = get_tree().get_first_node_in_group("loot")
+@onready var Crystal = get_tree().get_first_node_in_group("Crystal")
 @onready var sprite = $Sprite2D
 @onready var anim = $AnimationPlayer
 @onready var snd_hit = $snd_hit
@@ -27,7 +28,7 @@ func _ready():
 
 func _physics_process(_delta):
 	knockback = knockback.move_toward(Vector2.ZERO, knockback_recovery)
-	var direction = global_position.direction_to(player.global_position)
+	var direction = global_position.direction_to(Vector2.ZERO) #我們偷工減料讓他直接往中心移動
 	velocity = direction*movement_speed
 	velocity += knockback
 	move_and_slide()
