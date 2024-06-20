@@ -11,3 +11,5 @@ res://TitleScreen/menu.gd
 res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn
 res://TitleScreen/Options_Menu/FilterStrengthSlider.gd
 res://TitleScreen/Options_Menu/options_display_button.gd
+res://World/world.tscn
+res://Player/player.tscn

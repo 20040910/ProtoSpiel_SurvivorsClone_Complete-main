@@ -1,6 +1,6 @@
+HSlider
 CheckButton
 Label
-HSlider
 HBoxContainer
 TextureRect
 CanvasLayer
@@ -12,4 +12,3 @@ VSeparator
 MarginContainer
 TabBar
 TabContainer
-Control

@@ -66,19 +66,25 @@ alignment = 1
 
 [node name="Label" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sound1"
+text = "音效"
 
 [node name="Label2" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sound2"
+text = "背景音樂"
 
 [node name="Label3" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sound3"
 
 [node name="Label4" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sound4"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/音效/MarginContainer"]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="TabContainer/音效/MarginContainer"]
+custom_minimum_size = Vector2(100, 180)
+layout_mode = 2
 
 [node name="畫質" type="TabBar" parent="TabContainer"]
 layout_mode = 2

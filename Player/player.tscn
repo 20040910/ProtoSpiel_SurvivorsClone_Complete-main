@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dncgepmkc4jf4"]
+[gd_scene load_steps=20 format=3 uid="uid://dncgepmkc4jf4"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_37q80"]
 [ext_resource type="Texture2D" uid="uid://doa3scrwgj2oq" path="res://Textures/Player/player_sprite.png" id="1_jefax"]
@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://bnv76nm5171dn" path="res://Audio/SoundEffect/Victory.wav" id="10_rwm3p"]
 [ext_resource type="AudioStream" uid="uid://ca6physj6mqei" path="res://Audio/SoundEffect/Lose.ogg" id="11_28kfi"]
 [ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="12_i8esf"]
+[ext_resource type="Texture2D" uid="uid://dgwvu722l4plq" path="res://Shity/image (7).png" id="13_d8b1y"]
+[ext_resource type="Texture2D" uid="uid://oqb18jj3rkf4" path="res://Shity/image (8).png" id="14_75yse"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nffdp"]
 radius = 4.0
@@ -239,6 +241,16 @@ offset_top = 40.0
 offset_right = 208.0
 offset_bottom = 56.0
 columns = 10
+
+[node name="Image(7)" type="Sprite2D" parent="GUILayer/GUI"]
+position = Vector2(619, 127)
+scale = Vector2(0.119141, 0.124282)
+texture = ExtResource("13_d8b1y")
+
+[node name="Image(8)" type="Sprite2D" parent="GUILayer/GUI"]
+position = Vector2(55, 51)
+scale = Vector2(0.131637, -0.130231)
+texture = ExtResource("14_75yse")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
