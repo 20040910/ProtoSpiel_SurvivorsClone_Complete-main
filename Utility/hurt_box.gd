@@ -45,3 +45,7 @@ func remove_from_list(object):
 
 func _on_disable_timer_timeout():
 	collision.call_deferred("set","disabled",false)
+
+
+func _on_hurt(damage, angle, knockback):
+	pass # Replace with function body.

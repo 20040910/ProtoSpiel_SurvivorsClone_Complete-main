@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8d7vfbjt2aot" path="res://Shity/5151.png" id="1_a46rg"]
 [ext_resource type="PackedScene" uid="uid://dncgepmkc4jf4" path="res://Player/player.tscn" id="2_40uwv"]
+[ext_resource type="PackedScene" uid="uid://b1qr53uj2co7q" path="res://World/crystal_t.tscn" id="2_rkt6p"]
 [ext_resource type="PackedScene" uid="uid://ba2claihwes2y" path="res://Utility/enemy_spawner.tscn" id="3_p01g4"]
 [ext_resource type="Texture2D" uid="uid://ds0k2v0ubx3cx" path="res://Shity/12111.png" id="3_tbguj"]
 [ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="4_ee8bm"]
@@ -12,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://btf7clk4jja87" path="res://Enemy/enemy_super.tscn" id="9_xs42h"]
 [ext_resource type="AudioStream" uid="uid://bbufl4r1ou1rw" path="res://Audio/Music/battleThemeA.mp3" id="10_rk3we"]
 [ext_resource type="Script" path="res://Audio/Music/snd_Music.gd" id="11_ovtx6"]
-[ext_resource type="PackedScene" uid="uid://ch67tv55fh74v" path="res://World/crystal.tscn" id="13_8n310"]
 
 [sub_resource type="Resource" id="Resource_03m25"]
 script = ExtResource("5_jj7s8")
@@ -95,8 +95,6 @@ texture = ExtResource("1_a46rg")
 region_enabled = true
 region_rect = Rect2(-4000, -4000, 4000, 4000)
 
-[node name="Crystal" parent="." instance=ExtResource("13_8n310")]
-
 [node name="Player" parent="." instance=ExtResource("2_40uwv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
@@ -115,6 +113,8 @@ texture = ExtResource("3_tbguj")
 spawns = Array[ExtResource("5_jj7s8")]([SubResource("Resource_03m25"), SubResource("Resource_ij20a"), SubResource("Resource_68oxv"), SubResource("Resource_l8y0x"), SubResource("Resource_daq1w"), SubResource("Resource_0gpiy"), SubResource("Resource_4teun"), SubResource("Resource_rx6id"), SubResource("Resource_t2np8")])
 
 [node name="Loot" type="Node2D" parent="." groups=["loot"]]
+
+[node name="Crystal_T" parent="." instance=ExtResource("2_rkt6p")]
 
 [node name="snd_Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3

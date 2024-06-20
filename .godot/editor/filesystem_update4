@@ -8,3 +8,6 @@ res://World/crystal.tscn
 res://Enemy/enemy.gd
 res://World/crystal.gd
 res://Player/player.gd
+res://Utility/hurt_box.gd
+res://Enemy/enemy_kobold_weak.tscn
+res://World/crystal_t.tscn

@@ -1,3 +1,4 @@
+CharacterBody2D
 CollisionShape2D
 Area2D
 CanvasLayer
@@ -12,4 +13,3 @@ VScrollBar
 OptionButton
 VSeparator
 MarginContainer
-TabBar
