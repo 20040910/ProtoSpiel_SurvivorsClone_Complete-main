@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://du6qbgqucaqov"]
+[gd_scene load_steps=22 format=3 uid="uid://du6qbgqucaqov"]
 
 [ext_resource type="Texture2D" uid="uid://c8d7vfbjt2aot" path="res://Shity/5151.png" id="1_a46rg"]
 [ext_resource type="PackedScene" uid="uid://dncgepmkc4jf4" path="res://Player/player.tscn" id="2_40uwv"]
 [ext_resource type="PackedScene" uid="uid://ba2claihwes2y" path="res://Utility/enemy_spawner.tscn" id="3_p01g4"]
+[ext_resource type="Texture2D" uid="uid://ds0k2v0ubx3cx" path="res://Shity/12111.png" id="3_tbguj"]
 [ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="4_ee8bm"]
 [ext_resource type="Script" path="res://Utility/spawn_info.gd" id="5_jj7s8"]
 [ext_resource type="PackedScene" uid="uid://bbvhxvk65o8el" path="res://Enemy/enemy_kobold_strong.tscn" id="6_rumbx"]
@@ -94,6 +95,18 @@ region_enabled = true
 region_rect = Rect2(-4000, -4000, 4000, 4000)
 
 [node name="Player" parent="." instance=ExtResource("2_40uwv")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+layer = -6
+
+[node name="12111" type="Sprite2D" parent="Player/CanvasLayer"]
+process_priority = -10
+modulate = Color(0, 0.494118, 0.235294, 0.454902)
+z_index = -9
+position = Vector2(321.432, 179.273)
+rotation = -3.14159
+scale = Vector2(0.166074, 0.165312)
+texture = ExtResource("3_tbguj")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_p01g4")]
 spawns = Array[ExtResource("5_jj7s8")]([SubResource("Resource_03m25"), SubResource("Resource_ij20a"), SubResource("Resource_68oxv"), SubResource("Resource_l8y0x"), SubResource("Resource_daq1w"), SubResource("Resource_0gpiy"), SubResource("Resource_4teun"), SubResource("Resource_rx6id"), SubResource("Resource_t2np8")])

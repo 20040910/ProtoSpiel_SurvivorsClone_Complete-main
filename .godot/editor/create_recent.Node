@@ -1,9 +1,9 @@
+CanvasLayer
 HSlider
 CheckButton
 Label
 HBoxContainer
 TextureRect
-CanvasLayer
 VBoxContainer
 ScrollContainer
 VScrollBar

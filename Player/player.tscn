@@ -243,8 +243,8 @@ offset_bottom = 56.0
 columns = 10
 
 [node name="Image(7)" type="Sprite2D" parent="GUILayer/GUI"]
-position = Vector2(619, 127)
-scale = Vector2(0.119141, 0.124282)
+position = Vector2(614.625, 139.408)
+scale = Vector2(0.153321, 0.159937)
 texture = ExtResource("13_d8b1y")
 
 [node name="Image(8)" type="Sprite2D" parent="GUILayer/GUI"]
