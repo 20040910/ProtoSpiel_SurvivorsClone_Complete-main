@@ -1,6 +1,7 @@
-res://World/world.tscn
 res://TitleScreen/Options_Menu/settings_tab_container.tscn
+res://Player/player.gd
 res://TitleScreen/Options_Menu/Window_Mode_button.tscn
 res://TitleScreen/menu.tscn
 res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn
 res://Player/player.tscn
+res://World/world.tscn

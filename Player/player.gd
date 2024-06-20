@@ -135,7 +135,7 @@ func _on_ice_spear_attack_timer_timeout():
 	if icespear_ammo > 0:
 		var icespear_attack = iceSpear.instantiate()
 		icespear_attack.position = position
-		icespear_attack.target = get_random_target()
+		icespear_attack.target = get_global_mouse_position()
 		icespear_attack.level = icespear_level
 		add_child(icespear_attack)
 		icespear_ammo -= 1
