@@ -1,9 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://ch67tv55fh74v"]
+[gd_scene load_steps=7 format=3 uid="uid://ch67tv55fh74v"]
 
+[ext_resource type="Script" path="res://World/crystal.gd" id="1_nso04"]
 [ext_resource type="Texture2D" uid="uid://csrfy0geb2e31" path="res://Textures/Crystal/Crystal.png" id="1_sarl3"]
+[ext_resource type="Texture2D" uid="uid://cj6a5rhwov14" path="res://Textures/GUI/healthbar.png" id="2_5wguo"]
+[ext_resource type="Script" path="res://Utility/hurt_box.gd" id="2_51eiy"]
+[ext_resource type="Texture2D" uid="uid://da53mspvqfxq4" path="res://Textures/GUI/health.png" id="3_dexjx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ryb14"]
+radius = 120.0
+height = 288.0
 
 [node name="Crystal" type="Node2D"]
 scale = Vector2(0.25, 0.25)
+script = ExtResource("1_nso04")
 
 [node name="Crystal" type="Sprite2D" parent="."]
 texture = ExtResource("1_sarl3")
+
+[node name="HurtBox" type="Area2D" parent="."]
+script = ExtResource("2_51eiy")
+
+[node name="DisableTimer" type="Timer" parent="HurtBox"]
+wait_time = 0.5
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(4, -12)
+shape = SubResource("CapsuleShape2D_ryb14")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.392157)
+offset_left = -1796.0
+offset_top = 156.0
+offset_right = -1764.0
+offset_bottom = 164.0
+scale = Vector2(100, 100)
+value = 50.0
+texture_over = ExtResource("2_5wguo")
+texture_progress = ExtResource("3_dexjx")

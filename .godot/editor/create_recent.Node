@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 CanvasLayer
 HSlider
 CheckButton
@@ -11,4 +13,3 @@ OptionButton
 VSeparator
 MarginContainer
 TabBar
-TabContainer

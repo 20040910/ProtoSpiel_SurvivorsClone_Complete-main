@@ -6,3 +6,5 @@ res://Player/player.tscn
 res://World/world.tscn
 res://World/crystal.tscn
 res://Enemy/enemy.gd
+res://World/crystal.gd
+res://Player/player.gd
