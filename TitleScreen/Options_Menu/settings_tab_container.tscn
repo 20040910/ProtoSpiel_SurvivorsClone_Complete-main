@@ -40,11 +40,9 @@ scale = Vector2(1, 0.989899)
 theme_override_styles/panel = SubResource("StyleBoxFlat_gcgc2")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_2wkc5")
 tab_alignment = 1
-current_tab = 1
 clip_tabs = false
 
 [node name="音效" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/音效"]
@@ -54,9 +52,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 24
+theme_override_constants/margin_left = 128
 theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
+theme_override_constants/margin_right = 128
 theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/音效/MarginContainer"]
@@ -67,10 +65,12 @@ alignment = 1
 [node name="Label" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "音效"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "背景音樂"
+horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="TabContainer/音效/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -81,12 +81,15 @@ layout_mode = 2
 [node name="HSlider" type="HSlider" parent="TabContainer/音效/MarginContainer"]
 custom_minimum_size = Vector2(100, 70)
 layout_mode = 2
+value = 100.0
 
 [node name="HSlider2" type="HSlider" parent="TabContainer/音效/MarginContainer"]
 custom_minimum_size = Vector2(100, 180)
 layout_mode = 2
+value = 100.0
 
 [node name="畫質" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/畫質"]

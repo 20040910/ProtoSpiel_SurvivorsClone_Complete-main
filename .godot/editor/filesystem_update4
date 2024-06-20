@@ -4,11 +4,5 @@ res://TitleScreen/menu.tscn
 res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn
 res://Player/player.tscn
 res://World/world.tscn
-res://World/crystal.tscn
-res://Enemy/enemy.gd
-res://World/crystal.gd
-res://Player/player.gd
-res://Utility/hurt_box.gd
 res://Enemy/enemy_kobold_weak.tscn
 res://World/crystal_t.tscn
-res://Audio/Music/snd_Music.gd
