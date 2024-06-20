@@ -111,8 +111,9 @@ func movement():
 func attack():
 	if icespear_level > 0:
 		iceSpearTimer.wait_time = icespear_attackspeed * (1-spell_cooldown)
-		if iceSpearTimer.is_stopped():
-			iceSpearTimer.start()
+		if Input.get_mouse_button_mask() & MOUSE_BUTTON_LEFT != 0: 
+			if iceSpearTimer.is_stopped():
+				iceSpearTimer.start()
 	if tornado_level > 0:
 		tornadoTimer.wait_time = tornado_attackspeed * (1-spell_cooldown)
 		if tornadoTimer.is_stopped():
@@ -128,22 +129,24 @@ func _on_hurt_box_hurt(damage, _angle, _knockback):
 		death()
 
 func _on_ice_spear_timer_timeout():
-	icespear_ammo += icespear_baseammo + additional_attacks
-	iceSpearAttackTimer.start()
+	if InputEventMouseButton:
+		icespear_ammo += icespear_baseammo + additional_attacks
+		iceSpearAttackTimer.start()
 
 
 func _on_ice_spear_attack_timer_timeout():
-	if icespear_ammo > 0:
-		var icespear_attack = iceSpear.instantiate()
-		icespear_attack.position = position
-		icespear_attack.target = get_global_mouse_position()
-		icespear_attack.level = icespear_level
-		add_child(icespear_attack)
-		icespear_ammo -= 1
+	if Input.get_mouse_button_mask() & MOUSE_BUTTON_LEFT != 0: 
 		if icespear_ammo > 0:
-			iceSpearAttackTimer.start()
-		else:
-			iceSpearAttackTimer.stop()
+			var icespear_attack = iceSpear.instantiate()
+			icespear_attack.position = position
+			icespear_attack.target = get_global_mouse_position()
+			icespear_attack.level = icespear_level
+			add_child(icespear_attack)
+			icespear_ammo -= 1
+			if icespear_ammo > 0:
+				iceSpearAttackTimer.start()
+			else:
+				iceSpearAttackTimer.stop()
 
 func _on_tornado_timer_timeout():
 	tornado_ammo += tornado_baseammo + additional_attacks

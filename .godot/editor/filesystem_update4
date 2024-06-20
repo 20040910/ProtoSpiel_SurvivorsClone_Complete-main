@@ -7,3 +7,4 @@ res://World/world.tscn
 res://Enemy/enemy_kobold_weak.tscn
 res://World/crystal_t.tscn
 res://Player/player.gd
+res://Player/Attack/ice_spear.tscn
