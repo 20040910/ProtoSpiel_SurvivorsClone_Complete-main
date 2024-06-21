@@ -42,7 +42,7 @@ func death():
 		lblResult.text = "You Win"
 		sndVictory.play()
 	else:
-		lblResult.text = "You Lose"
+		lblResult.text = "新細明體"
 		sndLose.play()
 
 

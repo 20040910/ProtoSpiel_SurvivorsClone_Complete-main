@@ -410,12 +410,12 @@ func death():
 	tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 	tween.play()	
 	
-	lblResult.text = "You died"
+	lblResult.text = "你好爛"
 	sndLose.play()
 
 func _on_btn_menu_click_end():
 	get_tree().paused = false
-	emit_signal("Respawn")
+	emit_signal("重生")
 	deathPanel.visible = false
 	hp = 2
 	_on_hurt_box_hurt(0,0,0)

@@ -1,9 +1,10 @@
-res://World/world.tscn
 res://Enemy/enemy_kobold_weak.tscn
+res://Utility/enemy_spawner.gd
 res://World/crystal_t.tscn
 res://TitleScreen/menu.tscn
 res://Player/player.tscn
 res://Player/Attack/ice_spear.tscn
+res://Utility/upgrade_db.gd
+res://Utility/upgrade_db.tscn
 res://World/crystal.gd
-res://Utility/enemy_spawner.gd
 res://Player/player.gd
