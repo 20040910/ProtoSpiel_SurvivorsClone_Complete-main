@@ -62,6 +62,47 @@ offset_bottom = 296.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
 text = ""
 
+[node name="btn_options2" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 245.0
+offset_top = 226.0
+offset_right = 384.0
+offset_bottom = 256.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[node name="btn_options3" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 245.0
+offset_top = 186.0
+offset_right = 384.0
+offset_bottom = 216.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[node name="btn_options4" parent="Btn" instance=ExtResource("3_kwsdd")]
+layout_mode = 2
+offset_left = 245.0
+offset_top = 145.0
+offset_right = 384.0
+offset_bottom = 175.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
+[node name="btn_options5" parent="Btn" instance=ExtResource("3_kwsdd")]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_left = 405.0
+offset_top = 151.0
+offset_right = 449.0
+offset_bottom = 181.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rggqq")
+text = ""
+
 [connection signal="click_end" from="Btn/btn_exit" to="." method="_on_btn_exit_click_end"]
 [connection signal="click_end" from="Btn/btn_play" to="." method="_on_btn_play_click_end"]
 [connection signal="click_end" from="Btn/btn_options" to="." method="_on_btn_options_click_end"]
+[connection signal="click_end" from="Btn/btn_options2" to="." method="_on_btn_options_click_end"]
+[connection signal="click_end" from="Btn/btn_options3" to="." method="_on_btn_options_click_end"]
+[connection signal="click_end" from="Btn/btn_options4" to="." method="_on_btn_options_click_end"]
+[connection signal="click_end" from="Btn/btn_options5" to="." method="_on_btn_options_click_end"]
