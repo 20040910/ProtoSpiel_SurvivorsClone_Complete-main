@@ -6,3 +6,4 @@ res://Player/player.tscn
 res://Player/Attack/ice_spear.tscn
 res://World/crystal.gd
 res://Utility/enemy_spawner.gd
+res://Player/player.gd

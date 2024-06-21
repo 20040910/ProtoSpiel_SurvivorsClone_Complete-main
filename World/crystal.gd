@@ -18,7 +18,7 @@ func _ready():
 signal playerdeath
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	death() #pass
+	pass
 
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= clamp(damage, 1.0, 999.0)

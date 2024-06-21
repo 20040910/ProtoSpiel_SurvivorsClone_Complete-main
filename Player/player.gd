@@ -7,6 +7,15 @@ var maxhp = 80
 var last_movement = Vector2.UP
 var time = 0
 
+signal dash_started
+signal dash_ended
+
+var is_dashing = false
+var dash_duration = 0.2
+var dash_speed = 10
+var dash_timer = 0
+var invincible = false
+
 var experience = 0
 var experience_level = 1
 var collected_experience = 0
@@ -77,6 +86,39 @@ var enemy_close = []
 #Signal
 signal playerdeath
 signal Respawn
+
+# _process 函数
+func _process(delta):
+	if is_dashing:
+		dash_timer -= delta
+		if dash_timer <= 0:
+			end_dash()
+		else:
+			position += velocity * dash_speed * delta  # 根据当前方向冲刺
+	else:
+		# 其他处理逻辑
+		pass
+
+# _input 函数
+func _input(event):
+	if Input.is_action_just_pressed("dash"):
+		start_dash()
+
+# 开始冲刺的函数
+func start_dash():
+	if not is_dashing:
+		is_dashing = true
+		dash_timer = dash_duration
+		invincible = true
+		emit_signal("dash_started")
+
+# 结束冲刺的函数
+func end_dash():
+	is_dashing = false
+	invincible = false
+	emit_signal("dash_ended")
+	# 在此处添加结束残影的逻辑
+
 
 func _ready():
 	upgrade_character("icespear1")
