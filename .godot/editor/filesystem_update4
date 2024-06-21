@@ -1,10 +1,8 @@
-res://TitleScreen/Options_Menu/settings_tab_container.tscn
-res://TitleScreen/Options_Menu/Window_Mode_button.tscn
-res://TitleScreen/menu.tscn
-res://TitleScreen/Options_Menu/FilterStrengthSlider.tscn
-res://Player/player.tscn
 res://World/world.tscn
 res://Enemy/enemy_kobold_weak.tscn
 res://World/crystal_t.tscn
-res://Player/player.gd
+res://TitleScreen/menu.tscn
+res://Player/player.tscn
 res://Player/Attack/ice_spear.tscn
+res://World/crystal.gd
+res://Utility/enemy_spawner.gd

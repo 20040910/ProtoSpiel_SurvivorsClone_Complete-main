@@ -5,9 +5,10 @@ extends Node2D
 @onready var lblResult = get_node("%lbl_Result")
 @onready var sndVictory = get_node("%snd_victory")
 @onready var sndLose = get_node("%snd_lose")
+@onready var menu = preload("res://TitleScreen/menu.tscn") as PackedScene
 
 var hp = 16
-var maxhp = 16
+var maxhp = 15
 var time = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +18,7 @@ func _ready():
 signal playerdeath
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	death() #pass
 
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= clamp(damage, 1.0, 999.0)
@@ -25,7 +26,11 @@ func _on_hurt_box_hurt(damage, _angle, _knockback):
 	healthBar.value = hp
 	if hp <= 0:
 		death()
-		
+
+func _on_btn_menu_click_end():
+	get_tree().paused = false
+	get_tree().change_scene_to_packed(menu)		
+
 func death():
 	deathPanel.visible = true
 	emit_signal("playerdeath")
@@ -40,6 +45,5 @@ func death():
 		lblResult.text = "You Lose"
 		sndLose.play()
 
-func _on_btn_menu_click_end():
-	get_tree().paused = false
-	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
+
+	
